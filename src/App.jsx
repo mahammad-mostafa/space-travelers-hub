@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Layout from './components/layout';
 import Rockets from './components/rockets';
-import Missions from './components/mission';
+import Missions from './components/missions';
 import Profile from './components/profile';
 
 function App() {
