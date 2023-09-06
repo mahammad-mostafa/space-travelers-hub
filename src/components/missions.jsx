@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import '../styles/missions.css';
 import { useEffect } from 'react';
-import { fetchMissions } from '../slices/missionSlice';
+import { fetchMissions } from '../slices/missions/missionSlice';
 import Mission from './mission';
 
 const Missions = () => {

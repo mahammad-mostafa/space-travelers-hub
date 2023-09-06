@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { toggle } from '../slices/missionSlice';
+import { toggle } from '../slices/missions/missionSlice';
 
 const Mission = ({ mission }) => {
   const dispatch = useDispatch();
