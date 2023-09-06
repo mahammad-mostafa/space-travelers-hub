@@ -18,7 +18,7 @@ const Rockets = () => {
     return undefined;
   }, [dispatch, list]);
   if (loading) {
-    return <section className={Styles.section}><Indicator loading="true" /></section>;
+    return <Indicator loading="true" />;
   }
   return (
     <section className={Styles.section}>
