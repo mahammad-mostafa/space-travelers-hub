@@ -14,6 +14,7 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async (_
       name: mission.mission_name,
       id: mission.mission_id,
       description: mission.description,
+      link: mission.website,
       member: false,
     }));
     return dataFiltered;
