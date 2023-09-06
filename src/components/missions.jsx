@@ -9,7 +9,6 @@ const Missions = () => {
   const list = useSelector((state) => state.missions.list);
 
   useEffect(() => {
-    console.log(list);
     if (list.length > 0) {
       return;
     }

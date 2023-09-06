@@ -1,5 +1,6 @@
-import { useDispatch } from "react-redux";
-import { toggle } from "../slices/missionSlice";
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { toggle } from '../slices/missionSlice';
 
 const Mission = ({ mission }) => {
   const dispatch = useDispatch();
@@ -13,13 +14,16 @@ const Mission = ({ mission }) => {
         <p>{mission.description}</p>
       </div>
       <div className="col mission-member">
-        <p>{mission.member ? "Active Member" : "NOT A MEMBER"}</p>
+        <p>{mission.member ? 'Active Member' : 'NOT A MEMBER'}</p>
       </div>
       <div className="col mission-join">
-        <button type="button" onClick={() => dispatch(toggle(mission.id))}>{mission.member ? "Leave" : "Join"}</button>
+        <button type="button" onClick={() => dispatch(toggle(mission.id))}>{mission.member ? 'Leave' : 'Join'}</button>
       </div>
     </div>
   );
 };
 
+Mission.propTypes = {
+  mission: PropTypes.shape().isRequired,
+};
 export default Mission;
