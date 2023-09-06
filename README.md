@@ -55,6 +55,8 @@ Also config linters for (`CSS3` / `JavaScript`) in the `.github` folder.
 - Reserving & canceling actions for Rockets page
 - Joining & leaving actions for Missions page
 - Profile displays user current reserved rockets & joined missions
+- Ability to cancel rockets & leave missions on profile page
+- External Wikipedia link that open a new tab
  
 <p align="right"><a href="#title">back to top</a></p>
 
