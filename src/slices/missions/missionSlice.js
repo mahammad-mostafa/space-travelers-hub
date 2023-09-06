@@ -1,7 +1,3 @@
-/// `toggle` action for reducer
-/// list | loading | selected | error = states
-/// destructure from axios ONLY required data in repsonse
-/// use rejectWithValue in async
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 

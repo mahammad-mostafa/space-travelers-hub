@@ -5,6 +5,7 @@ import Layout from './components/layout';
 import Rockets from './components/rockets';
 import Missions from './components/missions';
 import Profile from './components/profile';
+import Indicator from './components/indicator';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Route index element={<Rockets />} />
             <Route path="missions" element={<Missions />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="*" element={<h1>404 Not found</h1>} />
+            <Route path="*" element={<Indicator message="404 Not Found" />} />
           </Route>
         </Routes>
       </BrowserRouter>
