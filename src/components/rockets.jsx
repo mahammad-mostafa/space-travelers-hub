@@ -24,7 +24,7 @@ const Rockets = () => {
     <section className={Styles.section}>
       {error === undefined && list.length > 0
         ? list.map((item) => <Rocket key={item.id} rocket={item} />)
-        : <Indicator error={error} length={list.length} />}
+        : <Indicator message={error} length={list.length} />}
     </section>
   );
 };

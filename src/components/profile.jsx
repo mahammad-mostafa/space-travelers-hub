@@ -12,7 +12,7 @@ const Profile = () => {
         <h2 className={Styles.title}>My Rockets</h2>
         {rockets.length === 0 ? (
           <div className={Styles.empty}>
-            <Indicator error="No Rockets Reserved" />
+            <Indicator message="No Rockets Reserved" />
           </div>
         ) : (
           <ul className={Styles.list}>

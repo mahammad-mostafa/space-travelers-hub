@@ -16,7 +16,7 @@ function App() {
             <Route index element={<Rockets />} />
             <Route path="missions" element={<Missions />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="*" element={<Indicator error="404 Not Found" />} />
+            <Route path="*" element={<Indicator message="404 Not Found" />} />
           </Route>
         </Routes>
       </BrowserRouter>

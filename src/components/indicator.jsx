@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Styles from '../styles/indicator.module.css';
 
-const Indicator = ({ loading = false, error, length }) => {
+const Indicator = ({ loading, message, length }) => {
   if (loading) {
     return (
       <div className={Styles.block}>
@@ -14,7 +14,7 @@ const Indicator = ({ loading = false, error, length }) => {
       </div>
     );
   }
-  if (error !== undefined || length === 0) {
+  if (message !== undefined || length === 0) {
     return (
       <div className={Styles.inline}>
         <svg className={Styles.error} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
@@ -22,7 +22,7 @@ const Indicator = ({ loading = false, error, length }) => {
                    24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
           />
         </svg>
-        <h2 className={Styles.text}>{(error !== undefined ? error : 'Empty List!')}</h2>
+        <h2 className={Styles.text}>{(message !== undefined ? message : 'Empty List!')}</h2>
       </div>
     );
   }
@@ -31,8 +31,8 @@ const Indicator = ({ loading = false, error, length }) => {
 
 Indicator.propTypes = PropTypes.shape({
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
   length: PropTypes.number.isRequired,
+  message: PropTypes.string.isRequired,
 }).isRequired;
 
 export default Indicator;
