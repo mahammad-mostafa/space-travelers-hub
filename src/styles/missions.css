@@ -1,0 +1,43 @@
+#missions-ctr {
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  border-bottom: solid black;
+}
+
+/* Selector for even number rows */
+.row:nth-child(even) {
+  background-color: darkgray;
+}
+
+
+/* Using "flex" property to define what proportion of the row the
+columns are going to use.
+In this case would be a row of 6 units, all the columns 
+use 1 unit each, except for the description column (.col-large), which uses 3 units. */
+.col {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  border-right: solid black;
+}
+
+.col:last-child {
+  border-right: transparent;
+}
+
+.col-large {
+  display: flex;
+  justify-content: center;
+  flex: 3 3;
+  text-align: justify;
+  border-right: solid black;
+  padding: 0.4rem;
+}
