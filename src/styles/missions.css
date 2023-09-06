@@ -18,7 +18,7 @@
 
 /* Using "flex" property to define what proportion of the row the
 columns are going to use.
-In this case would be a row of 6 units, all the columns 
+In this case would be a row of 6 units. All the columns 
 use 1 unit each, except for the description column (.col-large), which uses 3 units. */
 .col {
   flex: 1 1;
