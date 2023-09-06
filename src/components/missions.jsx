@@ -1,38 +1,38 @@
 import { useDispatch, useSelector } from 'react-redux';
-import '../styles/missions.css';
 import { useEffect } from 'react';
 import { fetchMissions } from '../slices/missions/missionSlice';
 import Mission from './mission';
+import Indicator from './indicator';
+import Styles from '../styles/mission.module.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
   const list = useSelector((state) => state.missions.list);
+  const loading = useSelector((state) => state.missions.loading);
 
   useEffect(() => {
     if (list.length > 0) {
-      return;
+      return undefined;
     }
-    dispatch(fetchMissions());
+    const promise = dispatch(fetchMissions());
+    return () => promise.abort();
   }, [dispatch, list]);
-  // ctr: container
+
+  if (loading) {
+    return <Indicator loading="true" />;
+  }
   return (
-    <div id="missions-ctr">
-      <div className="row">
-        <div className="col col-title">
-          <h3>Mission</h3>
-        </div>
-        <div className="col-large col-title">
-          <h3>Description</h3>
-        </div>
-        <div className="col col-title">
-          <h3>Status</h3>
-        </div>
-        <div className="col col-title" />
+    <section className={Styles.table}>
+      <div className={Styles.row}>
+        <div className={Styles.cells}><h3 className={Styles.labels}>Mission</h3></div>
+        <div className={Styles.cells}><h3 className={Styles.labels}>Description</h3></div>
+        <div className={Styles.cells}><h3 className={Styles.labels}>Status</h3></div>
+        <div className={Styles.cells}><h3 className={Styles.labels}>Action</h3></div>
       </div>
       {list.map((mission) => (
         <Mission mission={mission} key={mission.id} />
       ))}
-    </div>
+    </section>
   );
 };
 
