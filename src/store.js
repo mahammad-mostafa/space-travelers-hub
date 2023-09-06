@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
+import { configureStore } from '@reduxjs/toolkit';
+import rocketSlice from './slices/rockets/rocketSlice';
 
 const store = configureStore({
-  reducer: {}, middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  reducer: { rockets: rocketSlice },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
