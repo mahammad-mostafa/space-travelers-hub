@@ -58,7 +58,7 @@
 .image {
   width: 100%;
   object-fit: cover;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   background: url(../images/blank.jpg) transparent no-repeat center/cover;
   border-radius: 5px;
 }
@@ -87,12 +87,12 @@
   }
 
   .article {
-    height: 200px;
     flex-direction: row;
   }
-
+  
   .image {
     width: 250px;
+    height: 200px;
   }
 
   .link,
