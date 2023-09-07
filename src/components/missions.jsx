@@ -22,7 +22,7 @@ const Missions = () => {
     return <Indicator loading="true" />;
   }
   return (
-    <section className={Styles.table}>
+    <section className={Styles.table} data-testid="missions-list">
       <div className={Styles.row}>
         <div className={Styles.cells}><h3 className={Styles.labels}>Mission</h3></div>
         <div className={Styles.cells}><h3 className={Styles.labels}>Description</h3></div>
