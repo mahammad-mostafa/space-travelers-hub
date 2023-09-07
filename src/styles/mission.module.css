@@ -24,7 +24,6 @@
   font: 1rem/40px var(--bold-font);
   background-color: var(--blue-color);
   border-radius: 5px;
-  margin-top: auto;
 }
 
 .link {
@@ -36,44 +35,53 @@
   background-color: var(--red-color);
 }
 
-.article {
-  padding: 10px;
+.table {
   display: flex;
-  gap: 10px;
+  gap: 1px;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--light-color);
+  background-color: var(--border-color);
   border: 1px solid var(--border-color);
-  border-radius: 5px;
 }
 
-.details {
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  background-color: var(--border-color);
+}
+
+.cells {
   display: flex;
-  gap: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.image {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 4 / 3;
-  background: url(../images/blank.jpg) transparent no-repeat center/cover;
-  border-radius: 5px;
-}
-
-.badge {
   padding: 5px;
-  color: var(--light-color);
-  font: 0.75rem var(--bold-font);
-  background-color: var(--green-color);
-  border-radius: 5px;
-  margin-top: -8px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-color);
+}
+
+.row:nth-child(even) .cells {
+  background-color: var(--page-color);
+}
+
+.labels {
+  text-align: center;
+  font-family: var(--bold-font);
 }
 
 .description {
+  font-size: 0.8rem;
   text-align: justify;
+}
+
+.badge,
+.active {
+  padding: 5px;
+  color: var(--light-color);
+  font: 0.75rem var(--bold-font);
+  background-color: var(--gray-color);
+  border-radius: 5px;
+}
+
+.active {
+  background-color: var(--green-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -86,20 +94,16 @@
     font-size: 1rem;
   }
 
-  .article {
-    flex-direction: row;
-  }
-
-  .image {
-    width: 250px;
-    height: 200px;
-  }
-
   .link,
   .approve,
   .refuse {
-    width: 140px;
+    width: 80px;
     cursor: pointer;
     font: 0.75rem/30px var(--bold-font);
+  }
+
+  .row {
+    column-gap: 1px;
+    grid-template-columns: 1fr 5fr 120px 100px;
   }
 }
