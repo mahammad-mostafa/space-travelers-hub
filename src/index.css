@@ -1,0 +1,80 @@
+@font-face {
+  font-family: bold;
+  src: url(fonts/roboto-bold.ttf);
+}
+
+@font-face {
+  font-family: light;
+  src: url(fonts/roboto-light.ttf);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --light-color: #fff;
+  --dark-color: #212121;
+  --page-color: #fafafa;
+  --border-color: #e8e8e8;
+  --text-color: #636363;
+  --green-color: green;
+  --blue-color: blue;
+  --gray-color: gray;
+  --red-color: red;
+  --bold-font: bold;
+  --light-font: light;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  font: 12px var(--light-font);
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px 0;
+  background-color: var(--page-color);
+}
+
+main {
+  height: calc(100vh - 100px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  height: 100%;
+  padding: 20px 10px;
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  * {
+    font-size: 16px;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  main {
+    height: calc(100vh - 120px);
+  }
+}

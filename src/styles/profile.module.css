@@ -1,0 +1,38 @@
+.section {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.block {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.title {
+  font: 1.25rem var(--bold-font);
+  margin-bottom: 10px;
+}
+
+.empty,
+.list {
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  gap: 1px;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: var(--border-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
