@@ -98,7 +98,8 @@
   .link,
   .approve,
   .refuse {
-    width: 140px;
+    width: 120px;
+    flex-shrink: 0;
     cursor: pointer;
     font: 0.75rem/30px var(--bold-font);
   }
