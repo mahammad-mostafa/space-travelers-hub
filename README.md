@@ -38,12 +38,15 @@ All project dynamic files are contained in `src` directory while static assets a
 The live build is generated inside the `build` directory.
 Also config linters for (`CSS3` / `JavaScript`) in the `.github` folder.
 
+📌 **Live Demo:**
+- See the project live from [here](https://space-travelers-hub-4xta.onrender.com).
+
 📌 **Tech Stack:**
 - Framework used is `ReactJS`
 - State management by `Redux Toolkit`
 - Page structure is built with `JSX`
 - Styling is built with `CSS3`
-- Dynamic content is built with `ES6` JavaScript
+- Dynamic content is built with `ES6 JavaScript`
 - Bundling is done with `WebPack`
 - Data fetching is handled by `Axios`
 - Uint testing with `Jest`
