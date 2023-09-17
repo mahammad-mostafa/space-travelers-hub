@@ -74,16 +74,20 @@ You can easily download or fork this repository and work on it immadiately!
 📌 **Prerequisites:**
 - `NodeJS` for installing & running all packages
 
-📌 **Setup:**
+📌 **Installation:**
 - Install all dependencies with `npm`
 ```
 npm install
 ```
+
+📌 **Development:**
 - For live development on `localhost:3000` run:
 ```
 npm run start
 ```
-- Unit testing is done with:
+
+📌 **Testing:**
+- To run unit tests use:
 ```
 npm run test
 ```
